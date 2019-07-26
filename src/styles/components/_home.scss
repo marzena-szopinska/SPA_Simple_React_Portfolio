@@ -1,0 +1,27 @@
+main {
+    color: white;
+    text-align: center;
+}
+
+.intro {
+    width: 90%;
+    // center the intro box
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro {
+    
+    h1 {
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 5rem;
+    }
+
+    h3 {
+        font-weight: 100;
+        font-size: 2rem;
+    }
+}

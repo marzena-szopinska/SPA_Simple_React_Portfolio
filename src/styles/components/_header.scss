@@ -11,12 +11,16 @@ header {
     text-align: center;
     list-style: none;
     text-transform: uppercase;
+
+    li {
+        a {
+            width: 100%;
+            display: block;
+            padding: 1rem;
+            color: $color-white;
+            font-weight: 100;
+        }
+    }
 }
 
-.nav li a {
-    width: 100%;
-    display: block;
-    padding: 1rem;
-    color: $color-white;
-}
 
