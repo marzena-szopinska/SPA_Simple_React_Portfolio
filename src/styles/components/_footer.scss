@@ -1,0 +1,11 @@
+footer {
+    border-top: 1px solid black;
+    padding: 3rem;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-black;
+    font-style: italic;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
