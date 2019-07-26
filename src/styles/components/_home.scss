@@ -5,11 +5,7 @@ main {
 
 .intro {
     width: 90%;
-    // center the intro box
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include centerContent;
 }
 
 .intro {

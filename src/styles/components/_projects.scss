@@ -1,0 +1,9 @@
+.project {
+    @include centerContent;
+    color: $color-white;
+}
+
+.portfolio {
+    @include centerContent;
+    color: white;
+}

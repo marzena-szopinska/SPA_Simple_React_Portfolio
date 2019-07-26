@@ -4,3 +4,13 @@ $color-light-gray:#F5F5F5;
 $color-white: #fff;
 $color-violet: #DAC2FF;
 $color-black: #212b37;
+
+
+// mixins 
+@mixin centerContent {
+    // center the content
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
