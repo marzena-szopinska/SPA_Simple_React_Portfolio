@@ -4,6 +4,13 @@
 }
 
 .portfolio {
-    @include centerContent;
+    margin-top: 20rem;
     color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio__title {
+    text-transform: uppercase;
+    font-weight: 100;
 }
