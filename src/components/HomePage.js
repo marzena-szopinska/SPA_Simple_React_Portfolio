@@ -4,11 +4,12 @@ const HomePage = () => {
     return (
         <main>
             <div className='intro'>
-                <h1 className='name'>Marzena Szopinska</h1>
-                <h3>Junior Front End Developer</h3>
+                <h1 className='name'>ALex Smitche</h1>
+                <h3>Travel the world with me!</h3>
                 <div className='social-icons'>
-                  <i class="fab fa-linkedin icon"></i>
-                  <i class="fab fa-github-square icon"></i>
+                  <i class="fab fa-facebook-square"></i>
+                  <i class="fab fa-twitter-square"></i>
+                  <i class="fab fa-instagram"></i>
                 </div>
             </div>
         </main>

@@ -4,12 +4,9 @@ main {
 }
 
 .intro {
-    width: 90%;
-    @include centerContent;
-}
+  width: 90%;
+  @include centerContent;
 
-.intro {
-    
     h1 {
         text-transform: uppercase;
         font-weight: 100;
@@ -20,4 +17,5 @@ main {
         font-weight: 100;
         font-size: 2rem;
     }
+
 }
