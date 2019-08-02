@@ -10,12 +10,60 @@ main {
     h1 {
         text-transform: uppercase;
         font-weight: 100;
-        font-size: 5rem;
+        font-size: 4rem;
+
     }
 
-    h3 {
-        font-weight: 100;
-        font-size: 2rem;
+    .blink {
+      display: inline-block;
+
+      h3 {
+          font-weight: 100;
+          font-size: 2rem;
+      }
+
+      .typing-effect {
+        // add right border to the text
+        border-right: 2px solid $color-white;
+
+        overflow: hidden;
+        white-space: nowrap;
+        // play blink animation for the right border
+        // play typing animation
+        animation: typing-anim 10s steps(27) forwards,
+                  blinking-anim .7s step-end infinite;
+        animation-iteration-count: infinite;
+      }
+
     }
 
+}
+
+@keyframes blinking-anim {
+  from,to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: $color-white;
+  }
+}
+
+@keyframes typing-anim {
+  0% {
+    width: 0%;
+  }
+  30% {
+    width: 100%;
+  }
+
+  80% {
+    width: 100%;
+  }
+  90% {
+    width: 0%;
+  }
+  100% {
+    width: 0%;
+  }
 }
