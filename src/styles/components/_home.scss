@@ -1,43 +1,75 @@
 main {
     color: white;
     text-align: center;
-}
 
-.intro {
-  width: 90%;
-  @include centerContent;
+    .intro {
+      width: 90%;
+      @include centerContent;
 
-    h1 {
-        text-transform: uppercase;
-        font-weight: 100;
-        font-size: 4rem;
+        .intro__name {
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: 5rem;
+            font-family: 'Hanalei', cursive;
+            letter-spacing: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .blink {
+          display: inline-block;
+
+          h3 {
+              font-weight: 100;
+              font-size: 2rem;
+          }
+
+          .typing-effect {
+            // add right border to the text
+            border-right: 2px solid $color-white;
+            overflow: hidden;
+            white-space: nowrap;
+            // play blink animation for the right border
+            // play typing animation
+            animation: typing-anim 10s steps(27) forwards,
+                      blinking-anim .7s step-end infinite;
+            animation-iteration-count: infinite;
+          }
+
+        }
 
     }
 
-    .blink {
-      display: inline-block;
+    .social-icons {
+      width: 300px;
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba($color-white, .5);
+      .fab {
+        font-size: 3rem;
+        margin: 1rem 2rem;
+        &:first-child{
+          color: $color-fb;
+        }
 
-      h3 {
-          font-weight: 100;
-          font-size: 2rem;
+        &:nth-child(2){
+          color: $color-twitter;
+        }
+
+        &:last-child {
+          // add a nice gradient to the instagram icon
+          color: transparent;
+          background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+          background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
       }
-
-      .typing-effect {
-        // add right border to the text
-        border-right: 2px solid $color-white;
-
-        overflow: hidden;
-        white-space: nowrap;
-        // play blink animation for the right border
-        // play typing animation
-        animation: typing-anim 10s steps(27) forwards,
-                  blinking-anim .7s step-end infinite;
-        animation-iteration-count: infinite;
-      }
-
     }
-
 }
+
+
 
 @keyframes blinking-anim {
   from,to {
