@@ -1,0 +1,64 @@
+.navigation {
+  &__checkbox {
+    // hide the checkbox
+    display: none;
+
+  }
+
+  &__button {
+    // cover up the background image for the menu
+    height: 6.5rem;
+    width: 6.5rem;
+    // make the button fixed and position it on top of the background circle
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    z-index: 2000;
+  }
+
+  &__background {
+    // adding background to our menu, this background will be covered by the button
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: red;
+    // make the menu fix
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    // make it always on top of everything
+    z-index: 1000;
+    // add a gradient to the circle
+    background-image: radial-gradient($color-white, $color-violet);
+    // animate the background
+    transform: scale(50);
+
+  }
+
+  &__nav {
+    // take up the full view port and center links inside it
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+
+  }
+
+  &__list {
+    @include centerContent($top: 50%);
+    // get rid of default bullets
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+
+  }
+}

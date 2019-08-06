@@ -1,18 +1,19 @@
 main {
     color: white;
     text-align: center;
-
+    position: relative;
+    height: 100vh;
     .intro {
       width: 90%;
-      @include centerContent;
+      @include centerContent($top: 40%);
 
         .intro__name {
             text-transform: uppercase;
             font-weight: 100;
-            font-size: 5rem;
+            font-size: 6rem;
             font-family: 'Hanalei', cursive;
             letter-spacing: 4px;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.85rem;
         }
 
         .blink {
@@ -39,34 +40,34 @@ main {
 
     }
 
-    .social-icons {
-      width: 300px;
-      position: absolute;
-      top: 75%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba($color-white, .5);
-      .fab {
-        font-size: 3rem;
-        margin: 1rem 2rem;
-        &:first-child{
-          color: $color-fb;
-        }
-
-        &:nth-child(2){
-          color: $color-twitter;
-        }
-
-        &:last-child {
-          // add a nice gradient to the instagram icon
-          color: transparent;
-          background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-          background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-          background-clip: text;
-          -webkit-background-clip: text;
-        }
-      }
-    }
+    // .social-icons {
+    //   width: 300px;
+    //   position: absolute;
+    //   top: 75%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   background-color: rgba($color-white, .5);
+    //   .fab {
+    //     font-size: 3rem;
+    //     margin: 1rem 2rem;
+    //     &:first-child{
+    //       color: $color-fb;
+    //     }
+    //
+    //     &:nth-child(2){
+    //       color: $color-twitter;
+    //     }
+    //
+    //     &:last-child {
+    //       // add a nice gradient to the instagram icon
+    //       color: transparent;
+    //       background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    //       background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    //       background-clip: text;
+    //       -webkit-background-clip: text;
+    //     }
+    //   }
+    // }
 }
 
 

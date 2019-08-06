@@ -4,16 +4,17 @@ $color-light-gray:#F5F5F5;
 $color-white: #fff;
 $color-violet: #DAC2FF;
 $color-black: #1E1E1E;
+$color-dirty-yellow: #e4a86c;
 
 $color-fb: #395795;
 $color-twitter: #1c9dec;
 
 
 // mixins
-@mixin centerContent {
+@mixin centerContent($top: null) {
     // center the content
     position: absolute;
-    top: 50%;
+    top: $top;
     left: 50%;
     transform: translate(-50%, -50%);
 }
