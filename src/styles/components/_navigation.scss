@@ -17,6 +17,8 @@
     background-color: orange;
     // add a shadow to the button
     box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    text-align: center;
+    cursor: pointer;
   }
 
   &__background {
@@ -107,5 +109,55 @@
     opacity: 1;
     width: 100%;
 
+  }
+
+  // HAMBURGER ICON
+  &__icon {
+    position: relative;
+    margin-top: 3rem;
+    // there elements are sharing the same styles
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-black;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      // animate lines
+      transition: all .2s;
+    }
+    // move it down
+    &::before{ top: -.8rem; }
+    // move it up
+    &::after { top: .8rem; }
+  }
+  // space out the lines on hover
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  // hide the middle line on click, and remeber that the before and after pseudo elements depend on this element
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
