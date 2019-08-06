@@ -1,18 +1,16 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-// <i class="far fa-times-circle"></i>
-// <i className="fas fa-bars navigation__hamburger"></i>
-
 
 const Header = () => {
     return (
-      <div>
+      <header>
         <div className='navigation'>
           <input type='checkbox' className='navigation__checkbox' id='navi-toggle' />
-          <label for='navi-toggle' className='navigation__button'>
+          <label htmlFor='navi-toggle' className='navigation__button'>
             <span className='navigation__icon'>&nbsp;</span>
           </label>
+
           <div className='navigation__background'>&nbsp;</div>
 
           <nav className='navigation__nav'>
@@ -23,12 +21,7 @@ const Header = () => {
                 </ul>
           </nav>
         </div>
-        <header>
-            <div className='container'>
-
-            </div>
-        </header>
-      </div>
+      </header>
     );
 }
 

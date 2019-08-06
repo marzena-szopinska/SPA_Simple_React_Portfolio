@@ -6,15 +6,15 @@
 
   &__button {
     // cover up the background image for the menu
-    height: 6.5rem;
-    width: 6.5rem;
+    height: 7.5rem;
+    width: 7.5rem;
     // make the button fixed and position it on top of the background circle
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 3rem;
+    right: 3rem;
     border-radius: 50%;
     z-index: 2000;
-    background-color: orange;
+    background-color: $color-white;
     // add a shadow to the button
     box-shadow: 0 1rem 3rem rgba($color-black, .1);
     text-align: center;
@@ -29,12 +29,12 @@
     background-color: red;
     // make the menu fix
     position: fixed;
-    top: 2.5rem;
-    right: 2.5rem;
+    top: 3.5rem;
+    right: 3.5rem;
     // make it always on top of everything
     z-index: 1000;
     // add a gradient to the circle
-    background-image: radial-gradient($color-black, $color-violet);
+    background-image: radial-gradient($color-white, gray);
     // animate the background
     transition: transform .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -47,7 +47,7 @@
     // attach it to the screen
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     // make it always on top but under the button
     z-index: 1500;
     // hide the navigation
@@ -83,7 +83,7 @@
       font-weight: 300;
       text-transform: uppercase;
       padding: 1rem 2rem;
-      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-black 50%);
       background-size: 230%;
       // animate
       transition: all .5s;
@@ -93,6 +93,7 @@
     &:active {
       background-position: 100%;
       transform: translateX(1rem);
+      color: $color-white;
     }
 
   }
@@ -108,13 +109,12 @@
     // make the navigation visable
     opacity: 1;
     width: 100%;
-
   }
 
   // HAMBURGER ICON
   &__icon {
     position: relative;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     // there elements are sharing the same styles
     &,
     &::before,

@@ -1,19 +1,24 @@
 main {
-    color: white;
+    color: $color-white;
     text-align: center;
     position: relative;
     height: 100vh;
     .intro {
       width: 90%;
-      @include centerContent($top: 40%);
+      @include centerContent($top: 30%);
+      border-bottom: 1px solid $color-white;
+      padding-bottom: 1rem;
 
         .intro__name {
             text-transform: uppercase;
             font-weight: 100;
             font-size: 6rem;
-            font-family: 'Hanalei', cursive;
             letter-spacing: 4px;
             margin-bottom: 0.85rem;
+        }
+
+        .btn {
+          display: block;
         }
 
         .blink {

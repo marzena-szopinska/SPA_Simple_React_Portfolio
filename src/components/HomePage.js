@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const HomePage = () => {
     return (
@@ -8,6 +9,7 @@ const HomePage = () => {
                   <div className='blink'>
                     <h3 className='typing-effect'>Travel the world with me!</h3>
                   </div>
+                  <Link className='btn' to='/portfolio'>See More</Link>
             </div>
 
             <div className='social-icons'>
