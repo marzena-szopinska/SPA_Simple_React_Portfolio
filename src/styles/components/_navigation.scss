@@ -15,6 +15,7 @@
     right: 2rem;
     border-radius: 50%;
     z-index: 2000;
+    background-color: orange;
   }
 
   &__background {
@@ -30,9 +31,9 @@
     // make it always on top of everything
     z-index: 1000;
     // add a gradient to the circle
-    background-image: radial-gradient($color-white, $color-violet);
+    background-image: radial-gradient($color-black, $color-violet);
     // animate the background
-    transform: scale(50);
+    transform: scale(80);
 
   }
 
@@ -40,14 +41,17 @@
     // take up the full view port and center links inside it
     height: 100vh;
     width: 100%;
+    // attach it to the screen
     position: fixed;
     top: 0;
     right: 0;
+    // make it always on top but under the button
     z-index: 1500;
 
   }
 
   &__list {
+    // center the list
     @include centerContent($top: 50%);
     // get rid of default bullets
     list-style: none;
@@ -55,10 +59,30 @@
   }
 
   &__item {
-
+    margin: 3rem;
   }
 
   &__link {
+    &:link,
+    &:visited {
+      // style the links
+      display: inline-block;
+      color: $color-black;
+      font-size: 3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      background-size: 230%;
+      // animate
+      transition: all .5s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      transform: translateX(1rem);
+    }
 
   }
 }
