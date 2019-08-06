@@ -3,19 +3,16 @@ import {NavLink} from 'react-router-dom';
 
 // <i class="far fa-times-circle"></i>
 // <i className="fas fa-bars navigation__hamburger"></i>
-// <div className='navigation'>
-//     <div className='navigation__box'>
 
-//     </div>
-// </div>
 
 const Header = () => {
     return (
       <div>
-
         <div className='navigation'>
           <input type='checkbox' className='navigation__checkbox' id='navi-toggle' />
-          <label for='navi-toggle' className='navigation__button'>MENU</label>
+          <label for='navi-toggle' className='navigation__button'>
+            <span className='navigation__icon'></span>
+          </label>
           <div className='navigation__background'>&nbsp;</div>
 
           <nav className='navigation__nav'>
@@ -31,8 +28,7 @@ const Header = () => {
 
             </div>
         </header>
-
-        </div>
+      </div>
     );
 }
 

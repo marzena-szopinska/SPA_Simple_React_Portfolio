@@ -2,7 +2,6 @@
   &__checkbox {
     // hide the checkbox
     display: none;
-
   }
 
   &__button {
@@ -16,6 +15,8 @@
     border-radius: 50%;
     z-index: 2000;
     background-color: orange;
+    // add a shadow to the button
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
   }
 
   &__background {
@@ -33,7 +34,7 @@
     // add a gradient to the circle
     background-image: radial-gradient($color-black, $color-violet);
     // animate the background
-    transform: scale(80);
+    transition: transform .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   }
 
@@ -44,9 +45,15 @@
     // attach it to the screen
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     // make it always on top but under the button
     z-index: 1500;
+    // hide the navigation
+    opacity: 0;
+    // ... and make sure the invisable links are not clickable
+    width: 0;
+    // animate
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   }
 
@@ -56,6 +63,8 @@
     // get rid of default bullets
     list-style: none;
     text-align: center;
+    // set it to 100% , this will stop a sliding like effect when we open and close the navigation
+    width: 100%;
   }
 
   &__item {
@@ -83,6 +92,20 @@
       background-position: 100%;
       transform: translateX(1rem);
     }
+
+  }
+  // if the checkbox has been checked grab the background sibling of the checkbox
+  &__checkbox:checked ~ &__background {
+    // scale up the background
+    transform: scale(80);
+
+  }
+
+  // if the checkbox has been checked grab the navigation sibling of the checkbox
+  &__checkbox:checked ~ &__nav {
+    // make the navigation visable
+    opacity: 1;
+    width: 100%;
 
   }
 }
